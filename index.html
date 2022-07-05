@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- JS -->
     <script defer src="index.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css" type="text/css">
     <title>Calculator JS</title>
 </head>
-<body>
+<body onload="init()">
 
     <div id="app-container">
 
@@ -23,13 +27,31 @@
                 <div id="calculator">
                     <div id="screen-container">
                         <div id="screen">
-                            <p id="result">2078</p>
+                            <p id="result"></p>
                         </div>
                     </div>
                     <div id="keyboard-container">
-                        <div id="keyboard">
-                            
-
+                        <div id="keyboard">                            
+                            <div id="keyboard-numbers">
+                                <button id="seven" class="keyboard-number">7</button>
+                                <button id="eight" class="keyboard-number">8</button>
+                                <button id="nine" class="keyboard-number">9</button>
+                                <button id="four" class="keyboard-number">4</button>
+                                <button id="five" class="keyboard-number">5</button>
+                                <button id="six" class="keyboard-number">6</button>
+                                <button id="one" class="keyboard-number">1</button>
+                                <button id="two" class="keyboard-number">2</button>
+                                <button id="three" class="keyboard-number">3</button>
+                                <button id="cero" class="keyboard-number">0</button>
+                                <button id="ac" class="keyboard-number">AC</button>
+                                <button id="equal" class="keyboard-number">=</button>
+                            </div>
+                            <div id="keyboard-operators">
+                                <button id="divided">/</button>
+                                <button id="multiplied">*</button>
+                                <button id="minus">-</button>
+                                <button id="plus">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
