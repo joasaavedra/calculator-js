@@ -1,3 +1,7 @@
+var num1
+var num2
+var operator
+
 const init = () => {
 
     // Definiendo variables
@@ -54,8 +58,64 @@ const init = () => {
     ac.onclick = (e) => {
         reset()
     }
-    plus.onclick = (num1, num2) => {
-        add()
+    plus.onclick = (e) => {
+        num1 = total.textContent
+        operator = '+'
+        clean()
+    }
+    minus.onclick = (e) => {
+        num1 = total.textContent
+        operator = '-'
+        clean()
+    }
+    divided.onclick = (e) => {
+        num1 = total.textContent
+        operator = '/'
+        clean()
+    }
+    multiplied.onclick = (e) => {
+        num1 = total.textContent
+        operator = '*'
+        clean()
+    }
+    equal.onclick = (e) => {
+        num2 = total.textContent
+        solve()
+    }
+
+    //Definiendo funciones
+
+    const clean = () => {
+        total.textContent = ''
+    }
+
+    const reset = () => {
+        total.textContent = ''
+        num1 = 0
+        num2 = 0
+        operator = ''
+    }
+
+    //Calculo
+
+    const solve = () => {
+        let result = 0
+        switch(operator) {
+            case '+':
+                result = parseFloat(num1) + parseFloat(num2)
+                break;
+            case '-':
+                result = parseFloat(num1) - parseFloat(num2)
+                break;
+            case '*':
+                result = parseFloat(num1) * parseFloat(num2)
+                break;
+            case '/':
+                result = parseFloat(num1) / parseFloat(num2)
+                break;
+        }
+        reset()
+        total.textContent = result 
     }
 
 }
